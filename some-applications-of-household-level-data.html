@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Some applications of household-level data | Household Expenditure and Income Surveys of Iran</title>
+  <title>Chapter 8 Some applications of household-level data | Household Expenditure and Income Surveys of Iran</title>
   <meta name="description" content="The Household Expenditure and Income Surveys of Iran: Introduction and data cleaning" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Some applications of household-level data | Household Expenditure and Income Surveys of Iran" />
+  <meta property="og:title" content="Chapter 8 Some applications of household-level data | Household Expenditure and Income Surveys of Iran" />
   <meta property="og:type" content="book" />
   
   
@@ -16,23 +16,24 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Some applications of household-level data | Household Expenditure and Income Surveys of Iran" />
+  <meta name="twitter:title" content="Chapter 8 Some applications of household-level data | Household Expenditure and Income Surveys of Iran" />
   
   <meta name="twitter:description" content="The Household Expenditure and Income Surveys of Iran: Introduction and data cleaning" />
   
 
-<meta name="author" content="Mohammad Hoseini and Avenia Ghazarian" />
+<meta name="author" content="Mohammad Hoseini" />
 
 
-<meta name="date" content="2020-12-22" />
+<meta name="date" content="2021-04-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="trends-in-expenditure-items.html"/>
+<link rel="prev" href="trends-in-individual-level-data.html"/>
 
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,26 +51,21 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -89,7 +85,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -122,6 +118,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -134,49 +131,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="index.html#section"></a></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#sample-design"><i class="fa fa-check"></i><b>1.1</b> Sample design</a><ul>
+<li><a href="./">Iran's HEIS surveys</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a>
+<ul>
+<li><a href="index.html#section-1"></a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#sample-design"><i class="fa fa-check"></i><b>1.1</b> Sample design</a>
+<ul>
 <li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#rotating-panel-feature"><i class="fa fa-check"></i><b>1.1.1</b> Rotating panel feature</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#different-rounds"><i class="fa fa-check"></i><b>1.2</b> Different rounds</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="questionnaire-details.html"><a href="questionnaire-details.html"><i class="fa fa-check"></i><b>2</b> Questionnaire details</a><ul>
+<li class="chapter" data-level="2" data-path="questionnaire-details.html"><a href="questionnaire-details.html"><i class="fa fa-check"></i><b>2</b> Questionnaire details</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="questionnaire-details.html"><a href="questionnaire-details.html#part-1---member-characteristics"><i class="fa fa-check"></i><b>2.1</b> Part 1 - Member Characteristics</a></li>
 <li class="chapter" data-level="2.2" data-path="questionnaire-details.html"><a href="questionnaire-details.html#part-2---household-facilities"><i class="fa fa-check"></i><b>2.2</b> Part 2 - Household Facilities</a></li>
 <li class="chapter" data-level="2.3" data-path="questionnaire-details.html"><a href="questionnaire-details.html#part-3---expenditure"><i class="fa fa-check"></i><b>2.3</b> Part 3 - Expenditure</a></li>
 <li class="chapter" data-level="2.4" data-path="questionnaire-details.html"><a href="questionnaire-details.html#part-4-income"><i class="fa fa-check"></i><b>2.4</b> Part 4: Income</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="importing-raw-data.html"><a href="importing-raw-data.html"><i class="fa fa-check"></i><b>3</b> Importing raw data</a><ul>
+<li class="chapter" data-level="3" data-path="importing-raw-data.html"><a href="importing-raw-data.html"><i class="fa fa-check"></i><b>3</b> Importing raw data</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="importing-raw-data.html"><a href="importing-raw-data.html#importing-access-files-to-r"><i class="fa fa-check"></i><b>3.1</b> Importing access files to R</a></li>
 <li class="chapter" data-level="3.2" data-path="importing-raw-data.html"><a href="importing-raw-data.html#importing-code-for-all-years"><i class="fa fa-check"></i><b>3.2</b> Importing code for all years</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="cleaning-data.html"><a href="cleaning-data.html"><i class="fa fa-check"></i><b>4</b> Cleaning data</a><ul>
+<li class="chapter" data-level="4" data-path="cleaning-data.html"><a href="cleaning-data.html"><i class="fa fa-check"></i><b>4</b> Cleaning data</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="cleaning-data.html"><a href="cleaning-data.html#importing-raw-data-and-sampling-information"><i class="fa fa-check"></i><b>4.1</b> Importing raw data and sampling information</a></li>
-<li class="chapter" data-level="4.2" data-path="cleaning-data.html"><a href="cleaning-data.html#cleaning-part-1"><i class="fa fa-check"></i><b>4.2</b> Cleaning Part 1</a></li>
+<li class="chapter" data-level="4.2" data-path="cleaning-data.html"><a href="cleaning-data.html#cleaning-part-1"><i class="fa fa-check"></i><b>4.2</b> Cleaning Part 1</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="cleaning-data.html"><a href="cleaning-data.html#education-code"><i class="fa fa-check"></i><b>4.2.1</b> Education code</a></li>
+</ul></li>
 <li class="chapter" data-level="4.3" data-path="cleaning-data.html"><a href="cleaning-data.html#cleaning-part-2"><i class="fa fa-check"></i><b>4.3</b> Cleaning Part 2</a></li>
-<li class="chapter" data-level="4.4" data-path="cleaning-data.html"><a href="cleaning-data.html#cleaning-part-3"><i class="fa fa-check"></i><b>4.4</b> Cleaning Part 3</a><ul>
+<li class="chapter" data-level="4.4" data-path="cleaning-data.html"><a href="cleaning-data.html#cleaning-part-3"><i class="fa fa-check"></i><b>4.4</b> Cleaning Part 3</a>
+<ul>
 <li class="chapter" data-level="4.4.1" data-path="cleaning-data.html"><a href="cleaning-data.html#price-index-and-real-expenditure"><i class="fa fa-check"></i><b>4.4.1</b> Price index and real expenditure</a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="cleaning-data.html"><a href="cleaning-data.html#cleaning-part-4"><i class="fa fa-check"></i><b>4.5</b> Cleaning Part 4</a></li>
 <li class="chapter" data-level="4.6" data-path="cleaning-data.html"><a href="cleaning-data.html#building-item-level-data"><i class="fa fa-check"></i><b>4.6</b> Building item-level data</a></li>
 <li class="chapter" data-level="4.7" data-path="cleaning-data.html"><a href="cleaning-data.html#building-individual-level-data"><i class="fa fa-check"></i><b>4.7</b> Building individual-level data</a></li>
-<li class="chapter" data-level="4.8" data-path="cleaning-data.html"><a href="cleaning-data.html#building-household-level-data-summary-files"><i class="fa fa-check"></i><b>4.8</b> Building Household-level data (summary files)</a><ul>
+<li class="chapter" data-level="4.8" data-path="cleaning-data.html"><a href="cleaning-data.html#building-household-level-data-summary-files"><i class="fa fa-check"></i><b>4.8</b> Building Household-level data (summary files)</a>
+<ul>
 <li class="chapter" data-level="4.8.1" data-path="cleaning-data.html"><a href="cleaning-data.html#exporting-to-other-formats."><i class="fa fa-check"></i><b>4.8.1</b> Exporting to other formats.</a></li>
 </ul></li>
-<li class="chapter" data-level="4.9" data-path="cleaning-data.html"><a href="cleaning-data.html#special-issues-for-different-years"><i class="fa fa-check"></i><b>4.9</b> Special issues for different years</a><ul>
+<li class="chapter" data-level="4.9" data-path="cleaning-data.html"><a href="cleaning-data.html#special-issues-for-different-years"><i class="fa fa-check"></i><b>4.9</b> Special issues for different years</a>
+<ul>
 <li class="chapter" data-level="4.9.1" data-path="cleaning-data.html"><a href="cleaning-data.html#the-structure-of-address-variable"><i class="fa fa-check"></i><b>4.9.1</b> The structure of Address variable</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="trends-in-expenditure-items.html"><a href="trends-in-expenditure-items.html"><i class="fa fa-check"></i><b>5</b> Trends in expenditure items</a><ul>
+<li class="chapter" data-level="5" data-path="trends-in-expenditure-items.html"><a href="trends-in-expenditure-items.html"><i class="fa fa-check"></i><b>5</b> Trends in expenditure items</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="trends-in-expenditure-items.html"><a href="trends-in-expenditure-items.html#total-expenditure-across-coicop-groups"><i class="fa fa-check"></i><b>5.1</b> Total expenditure across COICOP groups</a></li>
 <li class="chapter" data-level="5.2" data-path="trends-in-expenditure-items.html"><a href="trends-in-expenditure-items.html#expenditure-shares-of-coicop-groups"><i class="fa fa-check"></i><b>5.2</b> Expenditure shares of COICOP groups</a></li>
 <li class="chapter" data-level="5.3" data-path="trends-in-expenditure-items.html"><a href="trends-in-expenditure-items.html#percapita-expenditure-across-coicop-groups-and-regions"><i class="fa fa-check"></i><b>5.3</b> Percapita expenditure across COICOP groups and regions</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="some-applications-of-household-level-data.html"><a href="some-applications-of-household-level-data.html"><i class="fa fa-check"></i><b>6</b> Some applications of household-level data</a><ul>
-<li class="chapter" data-level="6.1" data-path="some-applications-of-household-level-data.html"><a href="some-applications-of-household-level-data.html#gas-price-reform-in-november-2019-in-iran-and-poverty"><i class="fa fa-check"></i><b>6.1</b> Gas price reform in November 2019 in Iran and poverty</a></li>
-<li class="chapter" data-level="6.2" data-path="some-applications-of-household-level-data.html"><a href="some-applications-of-household-level-data.html#car-ownership-across-provinces"><i class="fa fa-check"></i><b>6.2</b> Car ownership across provinces</a></li>
+<li class="chapter" data-level="6" data-path="trends-of-household-level-data.html"><a href="trends-of-household-level-data.html"><i class="fa fa-check"></i><b>6</b> Trends of household-level data</a></li>
+<li class="chapter" data-level="7" data-path="trends-in-individual-level-data.html"><a href="trends-in-individual-level-data.html"><i class="fa fa-check"></i><b>7</b> Trends in individual-level data</a></li>
+<li class="chapter" data-level="8" data-path="some-applications-of-household-level-data.html"><a href="some-applications-of-household-level-data.html"><i class="fa fa-check"></i><b>8</b> Some applications of household-level data</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="some-applications-of-household-level-data.html"><a href="some-applications-of-household-level-data.html#gas-price-reform-in-november-2019-in-iran-and-poverty"><i class="fa fa-check"></i><b>8.1</b> Gas price reform in November 2019 in Iran and poverty</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank"> </a></li>
+
 </ul>
 
       </nav>
@@ -194,8 +214,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="some-applications-of-household-level-data" class="section level1">
-<h1><span class="header-section-number">6</span> Some applications of household-level data</h1>
+<div id="some-applications-of-household-level-data" class="section level1" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Some applications of household-level data</h1>
 <style type="text/css">
 pre {
   max-height: 500px;
@@ -206,988 +226,26 @@ pre[class] {
   max-height: 500px;
 }
 </style>
-<p>In this section, we present some application of the household level data</p>
-<div id="gas-price-reform-in-november-2019-in-iran-and-poverty" class="section level2">
-<h2><span class="header-section-number">6.1</span> Gas price reform in November 2019 in Iran and poverty</h2>
+<p>In this section, I present some application of the household level data.</p>
+<div id="gas-price-reform-in-november-2019-in-iran-and-poverty" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Gas price reform in November 2019 in Iran and poverty</h2>
 <p>The Iranian government announced an increase in gas price from 1000T to 3000T per liter in November 2019 (Aban 1398) and paid the revenue from this reform to the bottom 60% of household in the income disribution. To see whether this policy help improving the living condition of lower income households or not we compare the monthly trend of share of food expenditure in 1397 and 1398. As food is neccesary for housholds its share in total expenditure is a simple measure of poverty. The below code and its output shows that prior to Aban the food share in 1398 was higher than 1397, suggesting worse living condition in 1398. But after Aban the share declined and in 1398 were lower than 1397, which is most probably due to the gas price reform and its subsequent subsidies.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="some-applications-of-household-level-data.html#cb1-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="some-applications-of-household-level-data.html#cb1-2"></a>monthly &lt;-<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;./exported/HH97.Rds&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb1-3"><a href="some-applications-of-household-level-data.html#cb1-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">year=</span><span class="st">&quot;97&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb1-4"><a href="some-applications-of-household-level-data.html#cb1-4"></a><span class="st">  </span><span class="kw">bind_rows</span>(<span class="kw">readRDS</span>(<span class="st">&quot;./exported/HH98.Rds&quot;</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb1-5"><a href="some-applications-of-household-level-data.html#cb1-5"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">year=</span><span class="kw">replace_na</span>(year,<span class="st">&quot;98&quot;</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb1-6"><a href="some-applications-of-household-level-data.html#cb1-6"></a><span class="st">  </span><span class="kw">group_by</span>(month,year) <span class="op">%&gt;%</span></span>
-<span id="cb1-7"><a href="some-applications-of-household-level-data.html#cb1-7"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="kw">across</span>(<span class="kw">c</span>(cost_food,expenditure),<span class="op">~</span><span class="kw">sum</span>(.x<span class="op">*</span>weight,<span class="dt">na.rm=</span>T))) <span class="op">%&gt;%</span></span>
-<span id="cb1-8"><a href="some-applications-of-household-level-data.html#cb1-8"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">foodshare=</span>cost_food<span class="op">/</span>expenditure) <span class="op">%&gt;%</span></span>
-<span id="cb1-9"><a href="some-applications-of-household-level-data.html#cb1-9"></a><span class="st">    </span><span class="kw">filter</span>(month<span class="op">&gt;</span><span class="dv">0</span>)</span>
-<span id="cb1-10"><a href="some-applications-of-household-level-data.html#cb1-10"></a></span>
-<span id="cb1-11"><a href="some-applications-of-household-level-data.html#cb1-11"></a><span class="kw">ggplot</span>(monthly,<span class="kw">aes</span>(month, foodshare, <span class="dt">color =</span> year, <span class="dt">shape =</span> year)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb1-12"><a href="some-applications-of-household-level-data.html#cb1-12"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb1-13"><a href="some-applications-of-household-level-data.html#cb1-13"></a><span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept=</span><span class="dv">8</span>)<span class="op">+</span></span>
-<span id="cb1-14"><a href="some-applications-of-household-level-data.html#cb1-14"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;share of food in monthly expenditure&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb1-15"><a href="some-applications-of-household-level-data.html#cb1-15"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks=</span><span class="dv">1</span><span class="op">:</span><span class="dv">12</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="some-applications-of-household-level-data.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="some-applications-of-household-level-data.html#cb1-2" aria-hidden="true" tabindex="-1"></a>monthly <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;./exported/HH97.Rds&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a href="some-applications-of-household-level-data.html#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year=</span><span class="st">&quot;97&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a href="some-applications-of-household-level-data.html#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(<span class="fu">readRDS</span>(<span class="st">&quot;./exported/HH98.Rds&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="some-applications-of-household-level-data.html#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year=</span><span class="fu">replace_na</span>(year,<span class="st">&quot;98&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-6"><a href="some-applications-of-household-level-data.html#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month,year) <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a href="some-applications-of-household-level-data.html#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">c</span>(cost_food,expenditure),<span class="sc">~</span><span class="fu">sum</span>(.x<span class="sc">*</span>weight,<span class="at">na.rm=</span>T))) <span class="sc">%&gt;%</span></span>
+<span id="cb1-8"><a href="some-applications-of-household-level-data.html#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">foodshare=</span>cost_food<span class="sc">/</span>expenditure) <span class="sc">%&gt;%</span></span>
+<span id="cb1-9"><a href="some-applications-of-household-level-data.html#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(month<span class="sc">&gt;</span><span class="dv">0</span>)</span>
+<span id="cb1-10"><a href="some-applications-of-household-level-data.html#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="some-applications-of-household-level-data.html#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(monthly,<span class="fu">aes</span>(month, foodshare, <span class="at">color =</span> year, <span class="at">shape =</span> year)) <span class="sc">+</span> </span>
+<span id="cb1-12"><a href="some-applications-of-household-level-data.html#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-13"><a href="some-applications-of-household-level-data.html#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept=</span><span class="dv">8</span>)<span class="sc">+</span></span>
+<span id="cb1-14"><a href="some-applications-of-household-level-data.html#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;share of food in monthly expenditure&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb1-15"><a href="some-applications-of-household-level-data.html#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>)</span></code></pre></div>
 <p><img src="figures/Gasprice.png" /></p>
-</div>
-<div id="car-ownership-across-provinces" class="section level2">
-<h2><span class="header-section-number">6.2</span> Car ownership across provinces</h2>
-<p>The below code generates the share of car owner in each province</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="some-applications-of-household-level-data.html#cb2-1"></a><span class="kw">library</span>(tidyverse); <span class="kw">library</span>(knitr); <span class="kw">library</span>(kableExtra)</span>
-<span id="cb2-2"><a href="some-applications-of-household-level-data.html#cb2-2"></a></span>
-<span id="cb2-3"><a href="some-applications-of-household-level-data.html#cb2-3"></a><span class="kw">setwd</span>(<span class="st">&quot;D:/HEIS&quot;</span>)</span>
-<span id="cb2-4"><a href="some-applications-of-household-level-data.html#cb2-4"></a>list_HH &lt;-<span class="st"> </span><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;exported&quot;</span>, <span class="dt">pattern =</span> <span class="st">&quot;^HH.*</span><span class="ch">\\</span><span class="st">Rds$&quot;</span>)</span>
-<span id="cb2-5"><a href="some-applications-of-household-level-data.html#cb2-5"></a></span>
-<span id="cb2-6"><a href="some-applications-of-household-level-data.html#cb2-6"></a>HH &lt;-<span class="st"> </span><span class="ot">NULL</span></span>
-<span id="cb2-7"><a href="some-applications-of-household-level-data.html#cb2-7"></a><span class="cf">for</span> (year <span class="cf">in</span> list_HH) {</span>
-<span id="cb2-8"><a href="some-applications-of-household-level-data.html#cb2-8"></a>  HH &lt;-<span class="st"> </span><span class="kw">assign</span>(year, <span class="kw">readRDS</span>(<span class="kw">paste0</span>(<span class="st">&quot;exported/&quot;</span>,year))) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb2-9"><a href="some-applications-of-household-level-data.html#cb2-9"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">parse_number</span>(year)) <span class="op">%&gt;%</span></span>
-<span id="cb2-10"><a href="some-applications-of-household-level-data.html#cb2-10"></a><span class="st">    </span><span class="kw">bind_rows</span>(HH)</span>
-<span id="cb2-11"><a href="some-applications-of-household-level-data.html#cb2-11"></a>  <span class="kw">rm</span>(<span class="dt">list=</span>year)</span>
-<span id="cb2-12"><a href="some-applications-of-household-level-data.html#cb2-12"></a>}</span>
-<span id="cb2-13"><a href="some-applications-of-household-level-data.html#cb2-13"></a></span>
-<span id="cb2-14"><a href="some-applications-of-household-level-data.html#cb2-14"></a>HH <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">group_by</span>(year, province) <span class="op">%&gt;%</span></span>
-<span id="cb2-15"><a href="some-applications-of-household-level-data.html#cb2-15"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">car_ownership=</span><span class="kw">weighted.mean</span>(vehicle,weight,<span class="dt">na.rm =</span> T)<span class="op">*</span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
-<span id="cb2-16"><a href="some-applications-of-household-level-data.html#cb2-16"></a><span class="st">  </span><span class="kw">pivot_wider</span>(province, <span class="dt">names_from=</span><span class="st">&quot;year&quot;</span>, <span class="dt">values_from=</span><span class="st">&quot;car_ownership&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb2-17"><a href="some-applications-of-household-level-data.html#cb2-17"></a><span class="st">  </span><span class="kw">kable</span>(<span class="dt">caption =</span> <span class="st">&quot;Car ownership across provinces&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb2-18"><a href="some-applications-of-household-level-data.html#cb2-18"></a><span class="st">  </span><span class="kw">kable_styling</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;hover&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb2-19"><a href="some-applications-of-household-level-data.html#cb2-19"></a><span class="st">  </span><span class="kw">scroll_box</span>(<span class="dt">height =</span> <span class="st">&quot;500px&quot;</span>)</span></code></pre></div>
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; ">
-<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
-<caption>
-<span id="tab:unnamed-chunk-3">Table 6.1: </span>Car ownership across provinces
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-province
-</th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
-91
-</th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
-92
-</th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
-93
-</th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
-94
-</th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
-95
-</th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
-96
-</th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
-97
-</th>
-<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
-98
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-Markazi
-</td>
-<td style="text-align:right;">
-43.01038
-</td>
-<td style="text-align:right;">
-39.15167
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-46.83616
-</td>
-<td style="text-align:right;">
-51.64630
-</td>
-<td style="text-align:right;">
-49.57154
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Gilan
-</td>
-<td style="text-align:right;">
-28.31736
-</td>
-<td style="text-align:right;">
-31.51883
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-34.25897
-</td>
-<td style="text-align:right;">
-36.47945
-</td>
-<td style="text-align:right;">
-35.20249
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Mazandaran
-</td>
-<td style="text-align:right;">
-28.33231
-</td>
-<td style="text-align:right;">
-35.43812
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-45.61835
-</td>
-<td style="text-align:right;">
-45.85421
-</td>
-<td style="text-align:right;">
-43.52625
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-AzarbaijanSharghi
-</td>
-<td style="text-align:right;">
-32.97825
-</td>
-<td style="text-align:right;">
-37.50317
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-39.48517
-</td>
-<td style="text-align:right;">
-43.10528
-</td>
-<td style="text-align:right;">
-43.27720
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-AzarbaijanGharbi
-</td>
-<td style="text-align:right;">
-36.98186
-</td>
-<td style="text-align:right;">
-41.78300
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-45.50664
-</td>
-<td style="text-align:right;">
-45.40959
-</td>
-<td style="text-align:right;">
-54.73390
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Kermanshah
-</td>
-<td style="text-align:right;">
-27.94130
-</td>
-<td style="text-align:right;">
-30.37149
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-33.61177
-</td>
-<td style="text-align:right;">
-43.05263
-</td>
-<td style="text-align:right;">
-42.31064
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Kouzestan
-</td>
-<td style="text-align:right;">
-35.74085
-</td>
-<td style="text-align:right;">
-35.52991
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-38.74230
-</td>
-<td style="text-align:right;">
-38.62614
-</td>
-<td style="text-align:right;">
-40.07028
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Fars
-</td>
-<td style="text-align:right;">
-38.88914
-</td>
-<td style="text-align:right;">
-38.76896
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-46.08379
-</td>
-<td style="text-align:right;">
-51.16417
-</td>
-<td style="text-align:right;">
-48.51447
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Kerman
-</td>
-<td style="text-align:right;">
-43.93290
-</td>
-<td style="text-align:right;">
-43.80613
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-54.50490
-</td>
-<td style="text-align:right;">
-55.01675
-</td>
-<td style="text-align:right;">
-54.21379
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-KhorasanRazavi
-</td>
-<td style="text-align:right;">
-33.87559
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-42.27683
-</td>
-<td style="text-align:right;">
-45.79554
-</td>
-<td style="text-align:right;">
-44.00599
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Esfahan
-</td>
-<td style="text-align:right;">
-42.49254
-</td>
-<td style="text-align:right;">
-42.88777
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-52.98739
-</td>
-<td style="text-align:right;">
-58.29897
-</td>
-<td style="text-align:right;">
-60.19234
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-SistanBalouchestan
-</td>
-<td style="text-align:right;">
-17.18576
-</td>
-<td style="text-align:right;">
-19.91114
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-22.73198
-</td>
-<td style="text-align:right;">
-28.23147
-</td>
-<td style="text-align:right;">
-28.00504
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Kordestan
-</td>
-<td style="text-align:right;">
-22.40532
-</td>
-<td style="text-align:right;">
-26.60195
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-36.57922
-</td>
-<td style="text-align:right;">
-37.55322
-</td>
-<td style="text-align:right;">
-41.69228
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Hamedan
-</td>
-<td style="text-align:right;">
-30.10632
-</td>
-<td style="text-align:right;">
-27.24881
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-43.01405
-</td>
-<td style="text-align:right;">
-43.48110
-</td>
-<td style="text-align:right;">
-38.64652
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-CharmahalBakhtiari
-</td>
-<td style="text-align:right;">
-34.66550
-</td>
-<td style="text-align:right;">
-36.42123
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-48.58939
-</td>
-<td style="text-align:right;">
-50.50325
-</td>
-<td style="text-align:right;">
-46.09934
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Lorestan
-</td>
-<td style="text-align:right;">
-28.83553
-</td>
-<td style="text-align:right;">
-21.81317
-</td>
-<td style="text-align:right;">
-27.93626
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-30.98613
-</td>
-<td style="text-align:right;">
-31.61587
-</td>
-<td style="text-align:right;">
-32.93983
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Ilam
-</td>
-<td style="text-align:right;">
-29.34788
-</td>
-<td style="text-align:right;">
-33.40352
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-38.83065
-</td>
-<td style="text-align:right;">
-44.75097
-</td>
-<td style="text-align:right;">
-44.21638
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-KohkilouyeBoyerahamad
-</td>
-<td style="text-align:right;">
-24.37835
-</td>
-<td style="text-align:right;">
-29.30624
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-22.00725
-</td>
-<td style="text-align:right;">
-29.49408
-</td>
-<td style="text-align:right;">
-33.02894
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Boushehr
-</td>
-<td style="text-align:right;">
-42.87873
-</td>
-<td style="text-align:right;">
-46.48129
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-53.60981
-</td>
-<td style="text-align:right;">
-59.71293
-</td>
-<td style="text-align:right;">
-54.40757
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Zanjan
-</td>
-<td style="text-align:right;">
-35.24348
-</td>
-<td style="text-align:right;">
-37.07151
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-38.78832
-</td>
-<td style="text-align:right;">
-42.13578
-</td>
-<td style="text-align:right;">
-45.73873
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Semnan
-</td>
-<td style="text-align:right;">
-37.37244
-</td>
-<td style="text-align:right;">
-43.67425
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-47.87019
-</td>
-<td style="text-align:right;">
-50.79232
-</td>
-<td style="text-align:right;">
-52.66296
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Yazd
-</td>
-<td style="text-align:right;">
-60.37657
-</td>
-<td style="text-align:right;">
-60.83035
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-66.94192
-</td>
-<td style="text-align:right;">
-70.21662
-</td>
-<td style="text-align:right;">
-70.79475
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Hormozgan
-</td>
-<td style="text-align:right;">
-32.35488
-</td>
-<td style="text-align:right;">
-34.98067
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-42.76953
-</td>
-<td style="text-align:right;">
-41.10113
-</td>
-<td style="text-align:right;">
-39.64233
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Tehran
-</td>
-<td style="text-align:right;">
-45.49218
-</td>
-<td style="text-align:right;">
-47.97036
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-56.24781
-</td>
-<td style="text-align:right;">
-58.57913
-</td>
-<td style="text-align:right;">
-60.30397
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Ardebil
-</td>
-<td style="text-align:right;">
-30.43822
-</td>
-<td style="text-align:right;">
-24.75731
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-36.32265
-</td>
-<td style="text-align:right;">
-35.08313
-</td>
-<td style="text-align:right;">
-35.89254
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Qom
-</td>
-<td style="text-align:right;">
-36.03244
-</td>
-<td style="text-align:right;">
-42.53090
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-51.78613
-</td>
-<td style="text-align:right;">
-51.77588
-</td>
-<td style="text-align:right;">
-52.62781
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Qazvin
-</td>
-<td style="text-align:right;">
-39.96982
-</td>
-<td style="text-align:right;">
-38.11254
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-37.62343
-</td>
-<td style="text-align:right;">
-45.94644
-</td>
-<td style="text-align:right;">
-43.72430
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Golestan
-</td>
-<td style="text-align:right;">
-32.89236
-</td>
-<td style="text-align:right;">
-30.24539
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-36.58667
-</td>
-<td style="text-align:right;">
-39.37090
-</td>
-<td style="text-align:right;">
-39.30258
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-KhorasanShomali
-</td>
-<td style="text-align:right;">
-24.54880
-</td>
-<td style="text-align:right;">
-28.61405
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-40.60135
-</td>
-<td style="text-align:right;">
-41.42278
-</td>
-<td style="text-align:right;">
-41.55714
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-KhorasanJonoubi
-</td>
-<td style="text-align:right;">
-39.16171
-</td>
-<td style="text-align:right;">
-42.48087
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-44.96586
-</td>
-<td style="text-align:right;">
-47.76810
-</td>
-<td style="text-align:right;">
-49.45761
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Alborz
-</td>
-<td style="text-align:right;">
-40.27678
-</td>
-<td style="text-align:right;">
-42.81827
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-NaN
-</td>
-<td style="text-align:right;">
-52.10986
-</td>
-<td style="text-align:right;">
-54.43409
-</td>
-<td style="text-align:right;">
-49.62397
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 
 </div>
 </div>
@@ -1196,7 +254,7 @@ NaN
           </div>
         </div>
       </div>
-<a href="trends-in-expenditure-items.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="trends-in-individual-level-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -1228,8 +286,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-othertrends.Rmd",
+"text": "Edit"
 },
 "history": {
 "link": null,
@@ -1239,7 +297,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["HEIS.pdf", "HEIS.epub"],
 "toc": {
 "collapse": "subsection"
 }
