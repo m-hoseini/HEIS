@@ -24,7 +24,7 @@
 <meta name="author" content="Mohammad Hoseini" />
 
 
-<meta name="date" content="2021-04-10" />
+<meta name="date" content="2021-04-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -239,8 +239,8 @@ pre[class] {
 <li><em>IND98.Rds</em> which is the individual-level data</li>
 <li><em>EXP98.Rds</em> which is the item-level data</li>
 </ul>
-<p>The year-wise scripts can be downloaded from here: <a href="https://bit.ly/3l7jl14" class="uri">https://bit.ly/3l7jl14</a></p>
-<p>The cleaned data files for each can be downloaded from here: <a href="https://t.ly/YYfx" class="uri">https://t.ly/YYfx</a></p>
+<p>The year-wise scripts can be downloaded from here: <a href="https://github.com/m-hoseini/HEIS_script" class="uri">https://github.com/m-hoseini/HEIS_script</a></p>
+<p>The cleaned data files for each can be downloaded from here: <a href="https://b2n.ir/d12374" class="uri">https://b2n.ir/d12374</a></p>
 <p>In each yearly scripts, I do the following steps:</p>
 <ul>
 <li>rename variable to have unique names over time</li>
@@ -479,7 +479,7 @@ Between 1393 and 1396, literates who completed “adult literacy program” belo
 <h3><span class="header-section-number">4.4.1</span> Price index and real expenditure</h3>
 <p>After defining the global codes for each round, I merge each item with its price index. The index I use is based on an item-level monthly consumer price index published for over 500 items by the Central Bank of Iran. I obtained the indices for two base years: The index with the base year 1390 = 100, is available for years before 1395, and the index with the base year 1395 = 100, is available from 1392 onwards. I use the first index for the year before 1395, and the second index for years after 1395. To remove the drop in the level of indices between the two series, I compute the average ratio of the two indices in their overlapping years (1392 to 1395) for each item and multiply the second series by that ratio.</p>
 <p>As the item coding in HEIS (COICOP) is different from CPI item code, I need to match each COICOP item to a proper CPI item. This correspondence is not always straightforward. Some COICOP items are corresponding to multiple CPI items and vice versa. For this reason, I compute the price index for each COICOP item as the weighted average of the index of its corresponding CPI items, where the weight is drawn from the base basket of CPI. Also, in several instances, there is no specific CPI code for a COICOP item (e.g. donations) and in these cases, I use overall CPI as the price index. Doing these steps result in a price index file (<em>CPI.rds</em>) in which a monthly price index is computed for each global code (COICOP item).</p>
-<p>Because households are surveyed in different months of the year, and each table has a different recall period, for performing price adjustment of values, I note both the month of the survey and the recall period of the item. For items with past month recall period (Expenditure tables 1 to 12), I use the monthly price index, but for items with past year recall period (Expenditure tables 13 and 14), I use the average of the price index in 12 months ending to the month of the survey.</p>
+<p>Because households are surveyed in different months of the year, and each table has a different recall period, for performing price adjustment of values, I note both the month of the survey and the recall period of the item. For items with past month recall period (Expenditure tables 1 to 12), I use the monthly price index, but for items with past year recall period (Expenditure tables 13 and 14), I use the average of the price index in 12 months ending to the month of the survey. Before 1387, the month of survey is not reported in the surveys and thus for these years I use the average price index in the corresponding year for each item.</p>
 <p>Here is a sample code for 1398. At first, I define two data frames <em>month</em> that attaches the month of the survey to each household Address, and <em>CPI</em> which provides the COICOP-level monthly price index. Then for each table, I rename variables and define the unique item code as <em>DYCOL00</em>. Notice that the variables in all tables are not the same. The two variables “code” referring to item code in that year and “purchased” refers to the method of obtaining exist in all tables. But many variables exist in only some tables like “gram,” “kilogram,” “price” in tables 1 and 2, “cost” and “sell” in tables 13 and 14. In tables 1 to 12, “value” refers to the value of transactions, but in tables 13 and 14 no such variable already exists, and I define “value” as the net expenditure (cost - sell). I define a variable <em>table</em> to simplify summarizing expenditures in the next steps. The last four lines of code for each table is to merge the price index and to generate the value of expenditure in fixed price “value_r.” As mentioned above, in tables 1 to 12, the monthly price index is used, but in tables 13 and 14, the yearly average of the indices.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="cleaning-data.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding Global variable as DYCOL00</span></span>
 <span id="cb4-2"><a href="cleaning-data.html#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1466,7 +1466,8 @@ Between 1393 and 1396, literates who completed “adult literacy program” belo
 <h2><span class="header-section-number">4.9</span> Special issues for different years</h2>
 <p>There are some issues specific to one year or multiple years that are dealt with in the script of each year. I briefly mention them here:</p>
 <ul>
-<li><p>before 1396 SCI provides summary file separately and the weights are available only in summary files and not in the raw access files. Each year a number of households were absent for enumeration and they replaced with new samples. The summary files does not provide weight for non-responding household, but after 1396 their weights are included in the raw access files even though no other information is provided. This inconsistency is important to deal with for researcher who work with raw data files when computing regional share of households etc.</p></li>
+<li><p>Prior to 1387 the month of survey is not reported in the raw data. Thus, we use yearly price index for this years.</p></li>
+<li><p>Before 1396 SCI provides summary file separately and the weights are available only in summary files and not in the raw access files. Each year a number of households were absent for enumeration and they replaced with new samples. The summary files does not provide weight for non-responding household, but after 1396 their weights are included in the raw access files even though no other information is provided. This inconsistency is important to deal with for researcher who work with raw data files when computing regional share of households etc.</p></li>
 <li><p>ISIC codes are changing after 1392 and the user must have this in mind.</p></li>
 <li><p>The province codes are changed over time based on new administrative region in the country (like Alborz in 1390)</p></li>
 </ul>
